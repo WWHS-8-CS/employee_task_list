@@ -31,15 +31,15 @@ public class Mainframe {
 				e.addTask(task, 1);
 		}
 		case 2:
-			
+			System.out.println(e.peekTask());
 		case 3:
-			
+			System.out.println(e.dequeueTask());
 		case 4:
-			
+			System.out.println(e.peekDoneTask());
 		case 5:
-			
+			return e.popDoneTask();
 		case 6:
-			
+			System,out.println(e);
 		case 7:
 			System.exit(1);
 		}

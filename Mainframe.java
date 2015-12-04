@@ -17,33 +17,45 @@ public class Mainframe {
 		System.out.println("7: Exit");
 		System.out.print("What's your choice? ");
 		int choice = scan.nextInt();
-		
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		switch(choice)
 		{
 		case 1:
-		{
+		
 			System.out.print("Please enter task: ");
-			String task = scan.nextLine();
+			String task = scan.next();
 			System.out.print("Is it high priority?(y/n) ");
 			priority = scan.next();
 			if(priority.equalsIgnoreCase("y"))
 				e.addTask(task, 2);
 			if(priority.equalsIgnoreCase("n"))
 				e.addTask(task, 1);
-		}
+			break;
+		
 		case 2:
 			System.out.println(e.peekTask());
+			break;
 		case 3:
 			System.out.println(e.dequeueTask());
+			break;
 		case 4:
 			System.out.println(e.peekDoneTask());
+			break;
 		case 5:
 			e.addTask(e.popDoneTask());
+			break;
 		case 6:
 			System.out.println(e);
+			break;
 		case 7:
 			System.exit(0);
+			break;
 		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
 	}
 
 }

@@ -41,7 +41,7 @@ public class Mainframe {
 		case 6:
 			System,out.println(e);
 		case 7:
-			System.exit(1);
+			System.exit(0);
 		}
 	}
 

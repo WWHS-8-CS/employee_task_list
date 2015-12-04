@@ -37,9 +37,9 @@ public class Mainframe {
 		case 4:
 			System.out.println(e.peekDoneTask());
 		case 5:
-			return e.popDoneTask();
+			e.addTask(e.popDoneTask());
 		case 6:
-			System,out.println(e);
+			System.out.println(e);
 		case 7:
 			System.exit(0);
 		}

@@ -1,0 +1,13 @@
+For this assignment, we were asked to develop a solution for a workplace problem: task management.
+By implementing stacks and queues, I was able to create a program to let an employee add, view and 
+remove tasks and allow an employer to se what had been accomplished. I used four classes for this 
+project; a queue class for the priority queue, a stack class for completed tasks, an employee class 
+to implement the storage related to an employee, a task class for tasks, and a mainframe class for 
+the manager and employees to use to view everything. 
+
+In the future, this program could be improved by adding a GUI to simplify use for non-technical members
+of the workforce and users who find anything on a console terminal foreign and difficult to use. Also,
+in the mainframe class, a list of employees could be added to allow for the monitoring of many members 
+of the workforce instead of only Employee Aeron aka 'e'. Lastly, to simplify the construction of the 
+software, I could've used the java libraries for queues and stacks, instead of building my own.
+

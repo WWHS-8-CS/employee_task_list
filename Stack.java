@@ -1,26 +1,26 @@
 import java.util.*;
 public class Stack{
 	
-	private List<String> tasks;
+	private List<Task> tasks;
 	
 	public Stack()
 	{
-		tasks = new ArrayList<String>();
+		tasks = new ArrayList<Task>();
 	}
 	
-	public void push(String task)
+	public void push(Task t)
 	{
-		tasks.add(0, task);
+		tasks.add(0, t);
 	}
 	
-	public String pop()
+	public Task pop()
 	{
 		if(tasks.size() == 0)
 			throw new IllegalStateException("Can't pop from an empty stack.");
 		return tasks.remove(0);
 	}
 	
-	public String peek()
+	public Task peek()
 	{	
 		if(tasks.size() == 0)
 			throw new IllegalStateException("Can't peek at an empty stack.");

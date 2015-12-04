@@ -7,6 +7,7 @@ public class Mainframe {
 		Scanner scan = new Scanner(System.in);		
 		String priority;
 		
+		while(true){
 		System.out.println("1: Add a task");
 		System.out.println("2: Get a task");
 		System.out.println("3: Mark task complete");
@@ -45,4 +46,5 @@ public class Mainframe {
 		}
 	}
 
+}
 }

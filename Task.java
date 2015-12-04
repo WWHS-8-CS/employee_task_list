@@ -9,12 +9,12 @@ public class Task{
 		this.priority = priority;
 	}
 	
-	public String returnTask()
+	public String getTask()
 	{
 		return description;
 	}
 	
-	public int returnPriority()
+	public int getPriority()
 	{
 		return priority;
 	}

@@ -26,6 +26,14 @@ public class Employee{
 			highTaskList.enqueue(task);
 	}
 	
+	public void addTask(Task task)
+	{
+		if(task.getPriority() == 1)
+			lowTaskList.enqueue(task);
+		if(task.getPriority() == 2)
+			highTaskList.enqueue(task);
+	}
+	
 	public String dequeueTask()
 	{
 		if(!highTaskList.isEmpty()) 
@@ -33,9 +41,9 @@ public class Employee{
 		return lowTaskList.dequeue().getTask();
 	}
 	
-	public String popDoneTask()
+	public Task popDoneTask()
 	{
-		return completedTasks.pop().getTask();
+		return completedTasks.pop();
 	}
 	
 	public String peekDoneTask()

@@ -17,35 +17,36 @@ public class Employee{
 		return "Name: " + this.name;
 	}
 	
-	public void addTask(String task, int priority)
+	public void addTask(String t, int p)
 	{
-		if(priority == 1)
+		Task task = new Task(t, p);
+		if(task.getPriority() == 1)
 			lowTaskList.enqueue(task);
-		if(priority == 2)
+		if(task.getPriority() == 2)
 			highTaskList.enqueue(task);
 	}
 	
 	public String dequeueTask()
 	{
 		if(!highTaskList.isEmpty()) 
-			return highTaskList.dequeue();
-		return lowTaskList.dequeue();
+			return highTaskList.dequeue().getTask();
+		return lowTaskList.dequeue().getTask();
 	}
 	
 	public String popDoneTask()
 	{
-		return completedTasks.pop();
+		return completedTasks.pop().getTask();
 	}
 	
 	public String peekDoneTask()
 	{
-		return completedTasks.peek();
+		return completedTasks.peek().getTask();
 	}
 	
 	public String peekTask()
 	{
 		if(!highTaskList.isEmpty()) 
-			return highTaskList.peek();
-		return lowTaskList.peek();
+			return highTaskList.peek().getTask();
+		return lowTaskList.peek().getTask();
 	}
 }

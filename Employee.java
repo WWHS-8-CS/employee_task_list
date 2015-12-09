@@ -17,7 +17,7 @@ public class Employee{
 		return "Name: " + this.name;
 	}
 	
-	public void addTask(String t, int p)
+	public void enqueueTask(String t, int p)
 	{
 		Task task = new Task(t, p);
 		if(task.getPriority() == 1)
@@ -26,7 +26,7 @@ public class Employee{
 			highTaskList.enqueue(task);
 	}
 	
-	public void addTask(Task task)
+	public void enqueueTask(Task task)
 	{
 		if(task.getPriority() == 1)
 			lowTaskList.enqueue(task);
@@ -34,11 +34,16 @@ public class Employee{
 			highTaskList.enqueue(task);
 	}
 	
-	public String dequeueTask()
+	public Task dequeueTask()
 	{
 		if(!highTaskList.isEmpty()) 
-			return highTaskList.dequeue().getTask();
-		return lowTaskList.dequeue().getTask();
+			return highTaskList.dequeue();
+		return lowTaskList.dequeue();
+	}
+
+	public void pushDoneTask(Task t)
+	{
+		completedTasks.push(t);
 	}
 	
 	public Task popDoneTask()

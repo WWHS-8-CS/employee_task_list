@@ -12,7 +12,7 @@ public class Mainframe {
 		System.out.println("2: Get a task");
 		System.out.println("3: Mark task complete");
 		System.out.println("4: Display last task completed");
-		System.out.println("5: Return last task completed");
+		System.out.println("5: Return last task completed to uncompleted list");
 		System.out.println("6: Display employee info");
 		System.out.println("7: Exit");
 		System.out.print("What's your choice? ");
@@ -29,22 +29,22 @@ public class Mainframe {
 			System.out.print("Is it high priority?(y/n) ");
 			priority = scan.next();
 			if(priority.equalsIgnoreCase("y"))
-				e.addTask(task, 2);
+				e.enqueueTask(task, 2);
 			if(priority.equalsIgnoreCase("n"))
-				e.addTask(task, 1);
+				e.enqueueTask(task, 1);
 			break;
 		
 		case 2:
 			System.out.println(e.peekTask());
 			break;
 		case 3:
-			System.out.println(e.dequeueTask());
+			e.pushDoneTask(e.dequeueTask());
 			break;
 		case 4:
 			System.out.println(e.peekDoneTask());
 			break;
 		case 5:
-			e.addTask(e.popDoneTask());
+			e.enqueueTask(e.popDoneTask());
 			break;
 		case 6:
 			System.out.println(e);
